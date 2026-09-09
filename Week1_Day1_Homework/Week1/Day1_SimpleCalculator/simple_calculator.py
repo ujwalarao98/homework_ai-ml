@@ -1,0 +1,40 @@
+# Week 1 - Day 1
+# Simple Calculator
+# Menu-based calculator with basic input validation.
+
+print("Simple Calculator")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+choice = input("Choose an operation (1/2/3/4): ")
+
+if choice not in ["1", "2", "3", "4"]:
+    print("Invalid choice. Please select 1, 2, 3, or 4.")
+else:
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == "1":
+            result = num1 + num2
+            print("Result:", result)
+
+        elif choice == "2":
+            result = num1 - num2
+            print("Result:", result)
+
+        elif choice == "3":
+            result = num1 * num2
+            print("Result:", result)
+
+        elif choice == "4":
+            if num2 == 0:
+                print("Error: Cannot divide by zero.")
+            else:
+                result = num1 / num2
+                print("Result:", result)
+
+    except ValueError:
+        print("Invalid input. Please enter numeric values only.")
