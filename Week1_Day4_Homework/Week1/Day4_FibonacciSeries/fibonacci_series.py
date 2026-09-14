@@ -13,7 +13,7 @@ print("Fibonacci Series:")
 # Repeat the loop N times.
 for i in range(n):
     # Print the current Fibonacci number.
-    print(first, end=" ")
+    print(first)
 
     # Find the next number by adding the previous two.
     next_number = first + second
