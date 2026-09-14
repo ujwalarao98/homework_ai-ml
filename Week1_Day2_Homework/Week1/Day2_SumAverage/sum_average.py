@@ -23,9 +23,7 @@ def calculate_average(numbers):
 
 numbers = [10, 20, 30, 40, 50]
 
-total = calculate_sum(numbers)
-average = calculate_average(numbers)
 
 print("Numbers:", numbers)
-print("Sum:", total)
-print("Average:", average)
+print("Sum:", calculate_sum(numbers))
+print("Average:", calculate_average(numbers))
