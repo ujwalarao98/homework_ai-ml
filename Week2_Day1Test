@@ -1,0 +1,58 @@
+# Week 2 - Day 1
+# Test: Python Logic and Functions
+
+def count_vowels(text):
+    count = 0
+
+    for character in text:
+        if character.lower() in "aeiou":
+            count += 1
+
+    return count
+
+
+def reverse_text(text):
+    reversed_text = ""
+
+    for character in text:
+        reversed_text = character + reversed_text
+
+    return reversed_text
+
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+
+def find_longest_word(text):
+    words = text.split()
+    longest_word = words[0]
+
+    for word in words:
+        if len(word) > len(longest_word):
+            longest_word = word
+
+    return longest_word
+
+
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+print("\n--- Results ---")
+
+print("Words:", words)
+
+print("Number of words:", count_words(sentence))
+
+print("Number of vowels:", count_vowels(sentence))
+
+print("Reversed sentence:", reverse_text(sentence))
+
+print("Longest word:", find_longest_word(sentence))
+
+
+
+
+
+
